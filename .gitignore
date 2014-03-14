@@ -1,0 +1,5 @@
+*/__init__.py
+*/*.pyc
+*/*/__init__.py
+*/python/__init__.py
+*/*/*.pyc
