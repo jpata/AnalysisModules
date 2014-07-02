@@ -189,5 +189,7 @@ GenericCompositeCandProducer<IT>::fillDescriptions(edm::ConfigurationDescription
 }
 
 typedef GenericCompositeCandProducer<std::vector<reco::Candidate>> SimpleCompositeCandProducer;
+typedef GenericCompositeCandProducer<edm::OwnVector<reco::Candidate>> OwnVectorCompositeCandProducer;
 //define this as a plug-in
 DEFINE_FWK_MODULE(SimpleCompositeCandProducer);
+DEFINE_FWK_MODULE(OwnVectorCompositeCandProducer);
