@@ -188,7 +188,8 @@ GenericCompositeCandProducer<IT>::fillDescriptions(edm::ConfigurationDescription
   descriptions.addDefault(desc);
 }
 
-typedef GenericCompositeCandProducer<std::vector<reco::Candidate>> SimpleCompositeCandProducer;
+//OwnVector is not a View, so we need two separate producers
+typedef GenericCompositeCandProducer<edm::View<reco::Candidate>> SimpleCompositeCandProducer;
 typedef GenericCompositeCandProducer<edm::OwnVector<reco::Candidate>> OwnVectorCompositeCandProducer;
 //define this as a plug-in
 DEFINE_FWK_MODULE(SimpleCompositeCandProducer);
